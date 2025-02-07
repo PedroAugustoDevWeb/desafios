@@ -2,45 +2,36 @@ package com.picpaysimplificado.models;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.Column;
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "users")
-@Table(name = "users")
+@Entity(name = "transactions")
+@Table(name = "transactions")
 @Getter
 @Setter
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class User {
-
+public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private BigDecimal amount;
 
-    private String firstName;
+    @ManyToOne
+    private User sender;
 
-    @Column(unique = true)
-    private String email;
-
-    private String password;
-
-    @Column(unique = true)
-    private String cpf;
-
-    private BigDecimal balance;
-
-    @Enumerated(EnumType.STRING)
-    private UserType userType;
+    @ManyToOne
+    private User receiver;
+    
 }
