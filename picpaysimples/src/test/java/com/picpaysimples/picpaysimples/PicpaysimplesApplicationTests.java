@@ -1,10 +1,10 @@
-package com.picpaysimplificado;
+package com.picpaysimples.picpaysimples;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PicpaysimplificadoApplicationTests {
+class PicpaysimplesApplicationTests {
 
 	@Test
 	void contextLoads() {

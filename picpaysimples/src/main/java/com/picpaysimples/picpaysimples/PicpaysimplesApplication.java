@@ -1,13 +1,13 @@
-package com.picpaysimplificado;
+package com.picpaysimples.picpaysimples;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PicpaysimplificadoApplication {
+public class PicpaysimplesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PicpaysimplificadoApplication.class, args);
+		SpringApplication.run(PicpaysimplesApplication.class, args);
 	}
 
 }
