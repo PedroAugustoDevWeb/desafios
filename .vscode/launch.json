@@ -9,6 +9,16 @@
             "projectName": "picpaysimplificado",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PicpaysimplesApplication<picpaysimples>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.picpaysimples.picpaysimples.PicpaysimplesApplication",
+            "projectName": "picpaysimples",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
